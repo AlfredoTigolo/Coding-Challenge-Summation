@@ -53,7 +53,7 @@ class Alfredo_Tigolo_Summation
 		System.out.println("Hello Thomson Reuters");
 
 		// Algorithm coded in C/C++ added
-		/*
+		
 		int max_sum(int *vector, int len)
 		{
 			int best = 0, current = 0;
@@ -69,6 +69,6 @@ class Alfredo_Tigolo_Summation
 			}
 			return best;
 		}
-		*/
+		
 	}
 }
