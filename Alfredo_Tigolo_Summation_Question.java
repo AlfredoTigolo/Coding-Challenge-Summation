@@ -44,10 +44,25 @@ java Alfredo_Tigolo_Summation
 */
 class Alfredo_Tigolo_Summation
 {
+	public static void printArray ( int [] inArray )
+	{
+		for ( int i = 0; i < inArray.length; i++ )
+		{
+			System.out.println ( inArray [ i ]);
+		}
+		
+	}
 	public static void main (String[] args)
 	{
 		System.out.println("Hello Thomson Reuters");
-<<<<<<< HEAD
+		//- Input
+		//- array = [5, 10, 3, -4]
+		int[] anArray = {5, 10, 3, -4};
+		//- summation = 2
+		//- max = 8
+
+		printArray ( anArray );
+//<<<<<<< HEAD
 
 		// Algorithm coded in C/C++ added
 		/*
@@ -68,7 +83,7 @@ class Alfredo_Tigolo_Summation
 		}
 		*/
 		
-=======
->>>>>>> parent of 6367ebc... c/c++ algorithm solution
+//=======
+//>>>>>>> parent of 6367ebc... c/c++ algorithm solution
 	}
 }
