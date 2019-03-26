@@ -41,11 +41,34 @@ javac Alfredo_Tigolo_Summation_Question.java
 To Run in Java console:
 type
 java Alfredo_Tigolo_Summation
+
+Contact info:
+email alfredo.tigolo@yahoo.com
+cell 424-646-3493
 */
 class Alfredo_Tigolo_Summation
 {
 	public static void main (String[] args)
 	{
 		System.out.println("Hello Thomson Reuters");
+
+		// Algorithm coded in C/C++
+		/*
+		int max_sum(int *vector, int len)
+		{
+			int best = 0, current = 0;
+			int i = 0;
+			for(i = 0; i < len; ++i)
+			{
+				current += *(vector + i);
+				if(current < 0)
+				{
+					current = 0;
+				}
+				best = best > current ? best : current;
+			}
+			return best;
+		}
+		*/
 	}
 }
