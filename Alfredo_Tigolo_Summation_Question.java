@@ -41,16 +41,13 @@ javac Alfredo_Tigolo_Summation_Question.java
 To Run in Java console:
 type
 java Alfredo_Tigolo_Summation
-
-Contact info:
-email alfredo.tigolo@yahoo.com
-cell 424-646-3493
 */
 class Alfredo_Tigolo_Summation
 {
 	public static void main (String[] args)
 	{
 		System.out.println("Hello Thomson Reuters");
+<<<<<<< HEAD
 
 		// Algorithm coded in C/C++ added
 		/*
@@ -71,5 +68,7 @@ class Alfredo_Tigolo_Summation
 		}
 		*/
 		
+=======
+>>>>>>> parent of 6367ebc... c/c++ algorithm solution
 	}
 }
