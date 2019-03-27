@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /*
 Given an array, a summation number, and a maximum value; please give the total amount of
 combinations, followed by the combinations themselves.
@@ -71,26 +73,61 @@ class Alfredo_Tigolo_Summation
 	*/
 	public static void sumArray(int[] inArray, int len, int max) {
 		System.out.println();
-		int best = 0, current = 0;
-		int i = 0;
-		// while ( j >= 0)
-		// {
-		for (i = 0; i < len; ++i) {
-			// current += *(vector + i);
-			current += inArray[i]; // returns the max
-			System.out.println("Current = " + current);
-			// if(current < 0)
-			if (current < max) {
-				current = 0;
+		int best = 0, current = 0, sum = 0;
+		int i = 0, j = max - 1;
+		
+		//while ( j <= max - 1 )
+		while ( j >= 0 )
+		{
+			for (i = 0; i < len; ++i) {
+				// current += *(vector + i);
+				//current += inArray[i]; // returns the max
+				try
+				{
+					//current += inArray[i] + inArray[j]; // sums elemnts i and j
+					if ( len == 3 )
+						//current = inArray[i] + inArray[j] + inArray[j+1]; // sums elemnts i and j
+						sum = inArray[i] + inArray[j] + inArray[j+1]; // sums elemnts i and j
+					else
+					{
+						//current = inArray[i] + inArray[j]; // sums elemnts i and j
+						sum = inArray[i] + inArray[j]; // sums elemnts i and j
+						System.out.println ( i + " i = " + inArray[i] );
+						System.out.println ( j + " j = " + inArray[j] );
+					}
+
+				}
+				catch ( ArrayIndexOutOfBoundsException e )
+				{				
+				}
+
+				//System.out.println("Current = " + current);
+				//System.out.println("Current = " + sum);
+				// if(current < 0)
+				//if (current < max) {
+				if (sum < max) {
+					//current = 0;
+					sum = 0;
+				}
+				//best = best > current ? best : current;
+				max = best > max ? best : max;				
 			}
-			// best = best > current ? best : current;
-			best = best > max ? best : max;
+			if ( sum < max )
+			{
+				System.out.println("max = " + max);
+				System.out.println("best = " + best);
+				System.out.println("sum = " + sum);
+				System.out.println("summation = " + len); //number of array elements
+			}
+			
+
+			j--;
 		}
-		System.out.println("max = " + best);
-		// }
+
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args)
+		throws ArrayIndexOutOfBoundsException {
 		System.out.println(HELLO_THOMSON_REUTERS);
 		//- Input
 		//- array = [5, 10, 3, -4]
@@ -99,13 +136,17 @@ class Alfredo_Tigolo_Summation
 		//- summation = 2
 		//- max = 8
 
-		printArray ( anArray1 );
-		sumArray ( anArray1, 2, 8 );
+		
+			//printArray ( anArray1 );
+			System.out.println( Arrays.toString( anArray1 ) );
+			sumArray ( anArray1, 2, 8 );
 
-		System.out.println();
+			System.out.println();
 
-		printArray ( anArray2 );
-		sumArray ( anArray2, 3, 5 );
+			//printArray ( anArray2 );
+			System.out.println( Arrays.toString( anArray2 ) );
+			sumArray ( anArray2, 3, 5 );
+		
 //<<<<<<< HEAD
 
 		// Algorithm coded in C/C++ added
